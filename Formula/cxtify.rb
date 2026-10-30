@@ -5,13 +5,13 @@
 class Cxtify < Formula
   desc "Store, sync and inherit Claude context topics (say \"see-ex-tify\")"
   homepage "https://github.com/cxtify/cxtify"
-  version "0.1.6"
+  version "0.1.7"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cxtify/cxtify/releases/download/v0.1.6/cxtify_darwin_amd64.tar.gz"
-      sha256 "f39887199c90fc76d0df60207ed0e99a09e68095c06c63fd5117ba1cdb7c618a"
+      url "https://github.com/cxtify/cxtify/releases/download/v0.1.7/cxtify_darwin_amd64.tar.gz"
+      sha256 "3e0ea0804f400cafc73c6f7b1d432239a754344c62ac4d3a48c4c2791731dedb"
 
       define_method(:install) do
         bin.install "cxtify"
@@ -19,8 +19,8 @@ class Cxtify < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cxtify/cxtify/releases/download/v0.1.6/cxtify_darwin_arm64.tar.gz"
-      sha256 "ec4596ea8a8f877d4f8bf3d21e9d4fae228d3e9b41dcf009f16733c4b0473f93"
+      url "https://github.com/cxtify/cxtify/releases/download/v0.1.7/cxtify_darwin_arm64.tar.gz"
+      sha256 "9ae224dc4d11f960e378c8c687bfa2c96b022ee57116b7ed7b616348d3a49b81"
 
       define_method(:install) do
         bin.install "cxtify"
@@ -31,16 +31,16 @@ class Cxtify < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cxtify/cxtify/releases/download/v0.1.6/cxtify_linux_amd64.tar.gz"
-      sha256 "e0283ab8b22143c4b948c00bac02a1f10a3f664b431a6d170c3259b75325b0f5"
+      url "https://github.com/cxtify/cxtify/releases/download/v0.1.7/cxtify_linux_amd64.tar.gz"
+      sha256 "18690763acdf6dbfa1fddfc4f7b711924a218d201f21d18c340f3ee4d4657f54"
       define_method(:install) do
         bin.install "cxtify"
         bin.install_symlink bin/"cxtify" => "ctxify"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cxtify/cxtify/releases/download/v0.1.6/cxtify_linux_arm64.tar.gz"
-      sha256 "a8b49ead182e64041f4d71f2fa09ccc9e9e94825919977200163c282ebdee015"
+      url "https://github.com/cxtify/cxtify/releases/download/v0.1.7/cxtify_linux_arm64.tar.gz"
+      sha256 "febe6e3bee955ffe0f454ad188e6bd8635793ad89f54c373074029e5ac85b3ee"
       define_method(:install) do
         bin.install "cxtify"
         bin.install_symlink bin/"cxtify" => "ctxify"
